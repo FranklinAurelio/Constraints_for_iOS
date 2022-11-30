@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         travelTableView.dataSource = self
+        travelTableView.delegate = self
+        view.backgroundColor = UIColor(red: 30/255, green: 59/255, blue: 119/255, alpha: 1)
     }
 }
 //MARK: UITableView extension
@@ -31,4 +33,17 @@ extension ViewController: UITableViewDataSource{
     }
 }
 
+//MARK: UITableViewDelegate extension
+extension ViewController: UITableViewDelegate{
+    //MARK: UITableViewDelegate methods
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self)?.first as? HomeTableViewHeader
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 300
+    }
+}
 

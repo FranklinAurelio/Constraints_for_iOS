@@ -13,6 +13,8 @@
 		16D48920292D5FDC004CD648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D4891E292D5FDC004CD648 /* Main.storyboard */; };
 		16D48922292D5FDC004CD648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D48921292D5FDC004CD648 /* Assets.xcassets */; };
 		16D48925292D5FDC004CD648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D48923292D5FDC004CD648 /* LaunchScreen.storyboard */; };
+		16FE7C1829380ACB00FE20A5 /* HomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FE7C1729380ACB00FE20A5 /* HomeTableViewHeader.xib */; };
+		16FE7C1A29380E8800FE20A5 /* HomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FE7C1929380E8800FE20A5 /* HomeTableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		16D48921292D5FDC004CD648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16D48924292D5FDC004CD648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16D48926292D5FDC004CD648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16FE7C1729380ACB00FE20A5 /* HomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewHeader.xib; sourceTree = "<group>"; };
+		16FE7C1929380E8800FE20A5 /* HomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				16D48921292D5FDC004CD648 /* Assets.xcassets */,
 				16D48923292D5FDC004CD648 /* LaunchScreen.storyboard */,
 				16D48926292D5FDC004CD648 /* Info.plist */,
+				16FE7C1729380ACB00FE20A5 /* HomeTableViewHeader.xib */,
+				16FE7C1929380E8800FE20A5 /* HomeTableViewHeader.swift */,
 			);
 			path = travel_app;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D48925292D5FDC004CD648 /* LaunchScreen.storyboard in Resources */,
+				16FE7C1829380ACB00FE20A5 /* HomeTableViewHeader.xib in Resources */,
 				16D48922292D5FDC004CD648 /* Assets.xcassets in Resources */,
 				16D48920292D5FDC004CD648 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D4891D292D5FDC004CD648 /* ViewController.swift in Sources */,
+				16FE7C1A29380E8800FE20A5 /* HomeTableViewHeader.swift in Sources */,
 				16D48919292D5FDC004CD648 /* AppDelegate.swift in Sources */,
 				16D4891B292D5FDC004CD648 /* SceneDelegate.swift in Sources */,
 			);
