@@ -14,9 +14,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7OA-4E-XEd">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OA-4E-XEd">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PKO-9F-N4t">
                             <rect key="frame" x="36" y="79" width="62" height="44"/>
@@ -25,9 +24,8 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOq-yR-uXr" userLabel="BannerView">
-                            <rect key="frame" x="20" y="161" width="375" height="130"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOq-yR-uXr" userLabel="BannerView">
+                            <rect key="frame" x="20" y="150" width="375" height="130"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-Io-Pwb">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
@@ -40,13 +38,27 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="8sw-bd-cTf"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.11764705882352941" green="0.23137254901960785" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="0vE-yG-1r8"/>
+                        <constraint firstAttribute="bottom" secondItem="DOq-yR-uXr" secondAttribute="bottom" constant="-30" id="FKK-if-kGk"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DOq-yR-uXr" secondAttribute="trailing" constant="19" id="KXb-VW-tza"/>
+                <constraint firstItem="DOq-yR-uXr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dET-c4-IN8"/>
+                <constraint firstItem="7OA-4E-XEd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="u2K-SL-mc5"/>
+                <constraint firstItem="7OA-4E-XEd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="v0y-Dd-zvc"/>
+                <constraint firstItem="7OA-4E-XEd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yqj-4w-WWk"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bannerImageView" destination="gXH-Lz-fl8" id="lW9-Cb-iFs"/>
