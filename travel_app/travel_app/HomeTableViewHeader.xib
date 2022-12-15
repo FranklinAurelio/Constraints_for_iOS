@@ -27,19 +27,25 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOq-yR-uXr" userLabel="BannerView">
                             <rect key="frame" x="20" y="150" width="375" height="130"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-Io-Pwb">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-Io-Pwb">
+                                    <rect key="frame" x="0.0" y="0.0" width="225" height="130"/>
                                     <color key="backgroundColor" red="0.31764705882352939" green="0.70196078431372544" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </view>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXH-Lz-fl8">
-                                    <rect key="frame" x="200" y="0.0" width="175" height="130"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXH-Lz-fl8">
+                                    <rect key="frame" x="225" y="0.0" width="150" height="130"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="LVZ-Io-Pwb" firstAttribute="width" secondItem="DOq-yR-uXr" secondAttribute="width" multiplier="0.6" id="2kj-Ty-Lwk"/>
+                                <constraint firstItem="gXH-Lz-fl8" firstAttribute="width" secondItem="DOq-yR-uXr" secondAttribute="width" multiplier="0.4" id="6fl-5d-fTf"/>
                                 <constraint firstAttribute="height" constant="130" id="8sw-bd-cTf"/>
+                                <constraint firstAttribute="bottom" secondItem="LVZ-Io-Pwb" secondAttribute="bottom" id="QJm-Jd-AeK"/>
+                                <constraint firstItem="LVZ-Io-Pwb" firstAttribute="top" secondItem="DOq-yR-uXr" secondAttribute="top" id="auK-3Q-E9W"/>
+                                <constraint firstAttribute="bottom" secondItem="gXH-Lz-fl8" secondAttribute="bottom" id="eW1-p0-dvr"/>
+                                <constraint firstItem="gXH-Lz-fl8" firstAttribute="top" secondItem="DOq-yR-uXr" secondAttribute="top" id="pQD-md-SZB"/>
+                                <constraint firstAttribute="trailing" secondItem="gXH-Lz-fl8" secondAttribute="trailing" id="prb-MG-4Uk"/>
+                                <constraint firstItem="LVZ-Io-Pwb" firstAttribute="leading" secondItem="DOq-yR-uXr" secondAttribute="leading" id="zxG-6B-OQf"/>
                             </constraints>
                         </view>
                     </subviews>
