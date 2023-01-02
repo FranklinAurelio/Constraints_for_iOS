@@ -28,7 +28,7 @@ extension ViewController: UITableViewDataSource{
     
     //MARK: UITableView methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return sessaoDeViagens?[section].numeroDeLinhas ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
