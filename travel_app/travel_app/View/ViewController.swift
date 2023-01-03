@@ -35,7 +35,16 @@ extension ViewController: UITableViewDataSource{
         guard let cellTravel = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell") as? TravelTableViewCell else {
             fatalError("Erro to create TravelTableViewCell")
         }
-        return cellTravel
+        
+        let viewModel = sessaoDeViagens?[indexPath.section]
+        switch viewModel?.tipo {
+        case .destaques:
+            cellTravel.configuraCelula(viewModel?.viagens[indexPath.row])
+            return cellTravel
+        default:
+            return UITableViewCell()
+        }
+        
     }
 }
 
@@ -52,7 +61,8 @@ extension ViewController: UITableViewDelegate{
         return 300
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 400 :475
+        
     }
 }
 
