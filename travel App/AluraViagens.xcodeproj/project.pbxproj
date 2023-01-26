@@ -27,6 +27,8 @@
 		038864AF26D3EF91002A4753 /* OfertaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038864AD26D3EF91002A4753 /* OfertaTableViewCell.swift */; };
 		038864B026D3EF91002A4753 /* OfertaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038864AE26D3EF91002A4753 /* OfertaTableViewCell.xib */; };
 		038864B226D41A68002A4753 /* ViagemOfertaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038864B126D41A68002A4753 /* ViagemOfertaViewModel.swift */; };
+		16E7F83B2982A76F00BAEB60 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7F8392982A76F00BAEB60 /* DetalheViewController.swift */; };
+		16E7F83C2982A76F00BAEB60 /* DetalheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E7F83A2982A76F00BAEB60 /* DetalheViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		038864AD26D3EF91002A4753 /* OfertaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertaTableViewCell.swift; sourceTree = "<group>"; };
 		038864AE26D3EF91002A4753 /* OfertaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfertaTableViewCell.xib; sourceTree = "<group>"; };
 		038864B126D41A68002A4753 /* ViagemOfertaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemOfertaViewModel.swift; sourceTree = "<group>"; };
+		16E7F8392982A76F00BAEB60 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
+		16E7F83A2982A76F00BAEB60 /* DetalheViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalheViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			children = (
 				0353E14525FD570200221138 /* ViewController.swift */,
 				0353E14725FD570200221138 /* Main.storyboard */,
+				16E7F8382982A72F00BAEB60 /* DetalheViewController */,
 				03965CD52662D76600CEDD53 /* Header */,
 				03588E6E2663DEAC00BF0C82 /* Cells */,
 			);
@@ -187,6 +192,15 @@
 				038864B126D41A68002A4753 /* ViagemOfertaViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		16E7F8382982A72F00BAEB60 /* DetalheViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16E7F8392982A76F00BAEB60 /* DetalheViewController.swift */,
+				16E7F83A2982A76F00BAEB60 /* DetalheViewController.xib */,
+			);
+			path = DetalheViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E7F83C2982A76F00BAEB60 /* DetalheViewController.xib in Resources */,
 				0353E14E25FD570200221138 /* LaunchScreen.storyboard in Resources */,
 				03588E7C266439BF00BF0C82 /* server-response.json in Resources */,
 				0353E15B25FD636500221138 /* HomeTableViewHeader.xib in Resources */,
@@ -275,6 +290,7 @@
 				0353E14225FD570200221138 /* AppDelegate.swift in Sources */,
 				0353E14425FD570200221138 /* SceneDelegate.swift in Sources */,
 				03588E8C26643A9600BF0C82 /* ViagemViewModel.swift in Sources */,
+				16E7F83B2982A76F00BAEB60 /* DetalheViewController.swift in Sources */,
 				03588E8F26643B6A00BF0C82 /* ViagemDestaqueViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
