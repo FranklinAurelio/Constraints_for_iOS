@@ -2,7 +2,7 @@
 //  DecodableData.swift
 //  AluraViagens
 //
-//  Created by Ândriu Felipe Coelho on 28/01/21.
+//  Created by Franklin Carvalho on 13/03/21..
 //
 
 import Foundation
