@@ -67,4 +67,53 @@ class DetalheViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    func shakeAnimation(_ object:UIButton){
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        let initialPosition = CGPoint(x:object.center.x + 5 , y: object.center.y)
+        let finalPosition = CGPoint(x:object.center.x - 5 , y: object.center.y)
+        shake.fromValue = initialPosition
+        shake.toValue = finalPosition
+        object.layer.add(shake, forKey: nil)
+    }
+    
+    func pulseAnimation(_ object:UIButton){
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.5
+        pulse.fromValue = 0.95
+        pulse.toValue = 1.0
+        pulse.autoreverses = true
+        pulse.repeatCount = 1
+        
+        pulse.initialVelocity = 0.5
+        pulse.damping = 1.0
+        
+        object.layer.add(pulse, forKey: nil)
+        
+    }
+    
+    func animateButton(_ objectAnimated:UIButton) {
+        if(viagem?.titulo == "Pacote Natal" ||
+           viagem?.titulo == "Beto Carrero" ||
+           viagem?.titulo == "São Luís" ){
+            
+            pulseAnimation(objectAnimated)
+            
+            //navigationController?.popViewController(animated: true)
+
+        }
+        else{
+            shakeAnimation(objectAnimated)
+        }
+    }
+    
+    
+    @IBAction func botaoContinuar(_ sender: UIButton)  {
+        //guard let controller = //self.storyboard?.instantiateViewController(withIdentifier: //"botaoContinuar") else { return }
+        animateButton(sender)
+        
+    }
+    
 }

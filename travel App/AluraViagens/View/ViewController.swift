@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var viagensTableView: UITableView!
+    
+    var selectPackage: Viagem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,10 @@ class ViewController: UIViewController {
     func irParaDetalhe(_ viagem: Viagem?){
         
         if let viagemSelecionada = viagem {
+            selectPackage = viagemSelecionada
+            
             let detalheController = DetalheViewController.instanciar(viagemSelecionada)
+            
             navigationController?.pushViewController(detalheController, animated: true)
         }
     }
@@ -46,7 +51,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let viewModel = secaoDeViagens?[indexPath.section]
-        
+        //let x = UICollectionView.layoutAttributesForItem(at: indexPath)
         switch viewModel?.tipo {
         case .destaques:
             
@@ -55,6 +60,7 @@ extension ViewController: UITableViewDataSource {
             }
             
             celulaViagem.configuraCelula(viewModel?.viagens[indexPath.row])
+            
             return celulaViagem
             
         case .ofertas:
@@ -120,4 +126,21 @@ extension ViewController: OfertaTableViewCellDelegate{
     func didSelectView(_ viagem: Viagem?) {
         irParaDetalhe(viagem)
     }
+    
+    // MARK: - UINavigationControllerDelegate
+    /*func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        guard let imagePath = selectPackage?.asset else {return nil}
+        
+        guard let image = UIImage(named: imagePath) else {return nil}
+        
+        switch operation {
+        case .push:
+            return AnimationCustom(duration: 0.5, image: image, initialFrame: <#T##CGRect#>)
+        default:
+            break
+        }
+    }*/
 }
+
+

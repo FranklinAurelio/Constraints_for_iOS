@@ -30,7 +30,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKn-Kf-122" userLabel="ImageViagemView">
                             <rect key="frame" x="0.0" y="0.0" width="405" height="213"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancun-internacional" translatesAutoresizingMaskIntoConstraints="NO" id="s1o-7B-3g0">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancun-internacional" translatesAutoresizingMaskIntoConstraints="NO" id="s1o-7B-3g0">
                                     <rect key="frame" x="0.0" y="0.0" width="405" height="213"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0As-lG-4ED">
@@ -342,8 +342,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXf-6P-ZC9">
                     <rect key="frame" x="0.0" y="772" width="393" height="80"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-pR-PaX">
-                            <rect key="frame" x="14" y="17.666666666666629" width="365" height="45"/>
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="botaoContinuar" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-pR-PaX">
+                            <rect key="frame" x="40" y="17.666666666666629" width="313" height="45"/>
                             <color key="backgroundColor" systemColor="systemIndigoColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="uDR-xR-EqZ"/>
@@ -353,12 +353,15 @@
                             <state key="normal" title="Continuar">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="botaoContinuar:" destination="-1" eventType="touchUpInside" id="Ozi-68-gVY"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="eYj-pR-PaX" firstAttribute="leading" secondItem="ZXf-6P-ZC9" secondAttribute="leading" constant="14" id="76z-HS-BKW"/>
-                        <constraint firstAttribute="trailing" secondItem="eYj-pR-PaX" secondAttribute="trailing" constant="14" id="RgZ-Na-hC0"/>
+                        <constraint firstItem="eYj-pR-PaX" firstAttribute="leading" secondItem="ZXf-6P-ZC9" secondAttribute="leading" constant="40" id="76z-HS-BKW"/>
+                        <constraint firstAttribute="trailing" secondItem="eYj-pR-PaX" secondAttribute="trailing" constant="40" id="RgZ-Na-hC0"/>
                         <constraint firstItem="eYj-pR-PaX" firstAttribute="centerY" secondItem="ZXf-6P-ZC9" secondAttribute="centerY" id="TCb-Vo-DvG"/>
                         <constraint firstItem="eYj-pR-PaX" firstAttribute="centerX" secondItem="ZXf-6P-ZC9" secondAttribute="centerX" id="vU5-Xk-GHi"/>
                     </constraints>
